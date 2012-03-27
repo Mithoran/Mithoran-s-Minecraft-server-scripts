@@ -1,9 +1,23 @@
 Hi there! Here's some scripts I use to run my Minecraft server, feel free to suggest improvements.
 
-The scripts are:
+To use my scripts:
 
-run_server.sh:    Spawns a screen session, starts Java running with some tuned parameters.
-stop_server.sh:   Stops the server gracefully (which ends the screen session).
-mc_backup.sh:     Quiesce the server (save-off, save-all), do a git commit of the world files, let the server go (save-on)
-update_server.sh: Grab the latest minecraft_server.jar (stop the server first!)
+1. Clone the repo.
+2. Create a branch for your world-specific files (e.g. ops.txt, minecraft_server.jar), add those.
+3. [Optional] Change the directory in the backup script, if you intend to use it.
+4. Execute "./run_server.sh" and enjoy.
+
+The scripts are as follows:
+
+run_server.sh:
+  Spawns a screen session named "minecraft", starts Java running with some tuned parameters.
+
+stop_server.sh:
+  Stops the server gracefully (which ends the screen session).
+
+mc_backup.sh:
+  Quiesce the server (save-off, save-all), do a git commit of the world files, let the server go (save-on). I run a cron job to do this nightly. You will need to change the directory to where your server lives, naturally.
+
+update_server.sh:
+  Grab the latest minecraft_server.jar (stop the server first!).
 
