@@ -1,0 +1,9 @@
+Hi there! Here's some scripts I use to run my Minecraft server, feel free to suggest improvements.
+
+The scripts are:
+
+run_server.sh:    Spawns a screen session, starts Java running with some tuned parameters.
+stop_server.sh:   Stops the server gracefully (which ends the screen session).
+mc_backup.sh:     Quiesce the server (save-off, save-all), do a git commit of the world files, let the server go (save-on)
+update_server.sh: Grab the latest minecraft_server.jar (stop the server first!)
+
